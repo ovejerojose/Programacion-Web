@@ -5,5 +5,5 @@ Repositorio del modulo full stack (2022)
 
 https://github.com/ovejerojose/Full_Stack
 
-Nuestro proyecto partira desde este punto.
+Nuestro proyecto partida desde este punto.
     
