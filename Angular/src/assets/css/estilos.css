@@ -9,58 +9,6 @@ body {
     background-color: #e6b325 !important;
 }
 
-
-/*Header*/
-.presentacion
-{
-	height: 500px;
-	width: 100%;
-	background-color: #61481c;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-}
-.imgheader
-{
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	
-}
-/*logo*/
-.logo1{
-	width: 1200px;
-	height:450px;
-}
-.logo{
-	position: relative;
-	display: flex;
-	width: 100%;
-	height:100%;
-}
-.logo img{
-	border-radius: 100%;
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	left: 10px;
-}
-.nombrelogo {
-	color: aliceblue;
-	position: absolute;
-	font-size: 14px;
-	left: 75px;
-	top: 15px;
-}
-.nombrelogo2 {
-	color: aliceblue;
-	position: absolute;
-	font-size: 14px;
-	left: 62px;
-	top: 30px;
-}
 /*Login*/
 .login {
 	position: absolute;
@@ -148,14 +96,14 @@ footer{
 	text-align: center;
     margin-left: auto;
     margin-right: auto;	
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     margin-top:20px;
     font-family: 'Poppins', sans-serif;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     
 }
 
-footer p{padding: 10px;}
+footer p{padding: 5px;}
 
 footer a{
 	padding-right: 50px;

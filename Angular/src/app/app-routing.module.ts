@@ -4,17 +4,32 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { MapasitioComponent } from './pages/mapasitio/mapasitio.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { AlquilerComponent } from './pages/alquiler/alquiler.component';
+import { TiendaComponent } from './pages/tienda/tienda.component';
+import { LoginComponent } from './auth/login/login.component';
+import { TorneosComponent } from './pages/torneos/torneos.component';
 
-//creo constante tipo Routes ?¿
+// rutas es un arreglo [], linkea el modulo con el path que se usa en lugar del href
+//      Del link a index.html se cambiar a routerLink="index"
+//      <li><a href="index.html">Inicio</a></li>
+//      <li><a routerLink="index">Inicio</a></li>
 
-// rutas es un arrelo []
 const app_routes: Routes = [
+  //Link genericos para que ante error vaya al principal
   { path: '', component: PrincipalComponent},
-  { path: 'quienessomos', component: QuienessomosComponent},
-  { path: 'mapasitio', component: MapasitioComponent},
+  //{ path: '**', pathMatch: 'full', redirectTo: ''},
+  //Links del nav
+  { path: 'inicio', component: PrincipalComponent},
+  { path: 'alquiler', component: AlquilerComponent},
+  { path: 'torneos', component: TorneosComponent},
+  { path: 'tienda', component: TiendaComponent},
+  //Link usuarios
+  { path: 'login', component: LoginComponent},
   { path: 'formulario', component: FormularioComponent},
-  { path: '**', pathMatch: 'full', redirectTo: ''}
-];
+  //Links del footer
+  { path: 'mapasitio', component: MapasitioComponent},
+  { path: 'quienessomos', component: QuienessomosComponent}
+  ];
 
 
 //decorador? vaya a saber que es esto

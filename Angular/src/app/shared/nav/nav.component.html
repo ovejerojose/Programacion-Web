@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="inicio">Inicio</a></li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="alquiler">Alquiler</a></li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="torneos">Torneos</a></li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="tienda">Tienda</a></li>
+        <!-- agrego *ngIf para preguntar si userlogin es true o false-->
+        <li *ngIf="!userLoginOn" class="nav-item">
+          <a class="nav-link" routerLink="login">Iniciar Sesion</a></li>
+        <li *ngIf="userLoginOn" class="nav-item">
+          <a class="nav-link disabled" routerLink="inicio">Cerrar Sesion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

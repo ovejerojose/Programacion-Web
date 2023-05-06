@@ -1,1 +1,71 @@
-<p>formulario works!</p>
+<h1 id="title-form">Formulario para el registro de usuarios</h1>
+    <br>
+    <div class="formularios-login">
+     <form method="post" id="form">
+      <label for="nombre_cliente" id="tx-label"><p>Nombre y apellido</p></label>
+      <input
+        type="text"
+        name="nombre_cliente"
+        id="nombre_cliente"
+        placeholder="Ingrese su nombre completo"
+        required
+      />
+
+      <label for="domicilio" id="tx-label"><p>Domicilio</p></label>
+      <input
+        type="text"
+        name="domicilio"
+        id="domicilio"
+        placeholder="Ingrese su domicilio"
+        required
+      />
+
+      <label for="fecha_de_nacimiento" id="tx-label"><p>Fecha de nacimiento</p></label>
+      <input
+        type="date"
+        name="date"
+        id="fecha_de_nacimiento"
+        placeholder="Ingrese su fecha de nacimiento"
+        required
+      />
+
+      <label for="email_cliente" id="tx-label"><p>Correo electrónico</p></label>
+      <input
+        type="email"
+        name="email"
+        id="email_cliente"
+        placeholder="Ingrese su correo electrónico"
+        required
+      />
+
+      <label for="telefonocelular" id="tx-label"><p>Teléfono</p></label>
+      <input
+        type="number"
+        name="cel"
+        id="telefonocelular"
+        placeholder="Ingrese su número de contacto"
+        required
+        maxlength="10"
+      />
+
+      <label for="nivel" id="tx-label2"><p>Nivel de tenis</p></label>
+      <select name="nivel" id="npt-text">
+        <option value="hidden" id="opcion">Seleccione una opción</option>
+        <option value="A1" id="opcion">A1</option>
+        <option value="A2" id="opcion">A2</option>
+        <option value="B1" id="opcion">B1</option>
+        <option value="B2" id="opcion">B2</option>
+      </select>
+
+      <label for="desafios" id="tx-label3"><p>¿Acepta desafíos?</p></label>
+      <div id="radio">
+        <input type="radio" name="acepta" /><b>Si</b><br />
+        <input type="radio" name="acepta" /><b>No</b><br />
+      </div>
+      
+      <input type="button" onclick="mensajeRegistroExitoso()" value="Enviar" id="Enviar">
+
+
+    </form>
+  
+  </div>

@@ -9,6 +9,13 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { MapasitioComponent } from './pages/mapasitio/mapasitio.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { TiendaComponent } from './pages/tienda/tienda.component';
+import { AlquilerComponent } from './pages/alquiler/alquiler.component';
+import { TorneosComponent } from './pages/torneos/torneos.component';
+import { LoginComponent } from './auth/login/login.component';
+import { NavComponent } from './shared/nav/nav.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +25,18 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
     PrincipalComponent,
     QuienessomosComponent,
     MapasitioComponent,
-    FormularioComponent
+    FormularioComponent,
+    TiendaComponent,
+    AlquilerComponent,
+    TorneosComponent,
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
