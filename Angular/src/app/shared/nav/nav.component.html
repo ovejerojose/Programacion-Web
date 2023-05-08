@@ -25,6 +25,8 @@
         <!-- agrego *ngIf para preguntar si userlogin es true o false-->
         <li *ngIf="!userLoginOn" class="nav-item">
           <a class="nav-link" routerLink="login">Iniciar Sesion</a></li>
+          <li *ngIf="!userLoginOn" class="nav-item">
+            <a class="nav-link" routerLink="formulario">Registrate</a></li>
         <li *ngIf="userLoginOn" class="nav-item">
           <a class="nav-link disabled" routerLink="inicio">Cerrar Sesion</a></li>
       </ul>

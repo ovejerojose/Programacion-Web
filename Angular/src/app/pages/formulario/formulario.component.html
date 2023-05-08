@@ -1,71 +1,135 @@
-<h1 id="title-form">Formulario para el registro de usuarios</h1>
-    <br>
-    <div class="formularios-login">
-     <form method="post" id="form">
-      <label for="nombre_cliente" id="tx-label"><p>Nombre y apellido</p></label>
-      <input
-        type="text"
-        name="nombre_cliente"
-        id="nombre_cliente"
-        placeholder="Ingrese su nombre completo"
-        required
-      />
+<h1 id="title-form">Registro de usuarios</h1>
+    
+    <div class="formulario-de-registro">
 
-      <label for="domicilio" id="tx-label"><p>Domicilio</p></label>
-      <input
-        type="text"
-        name="domicilio"
-        id="domicilio"
-        placeholder="Ingrese su domicilio"
-        required
-      />
+      <!-- Aca empiezo a poner el formnuevo-->
 
-      <label for="fecha_de_nacimiento" id="tx-label"><p>Fecha de nacimiento</p></label>
-      <input
-        type="date"
-        name="date"
-        id="fecha_de_nacimiento"
-        placeholder="Ingrese su fecha de nacimiento"
-        required
-      />
+    <form [formGroup]="RegisterForm">
 
-      <label for="email_cliente" id="tx-label"><p>Correo electrónico</p></label>
-      <input
-        type="email"
-        name="email"
-        id="email_cliente"
-        placeholder="Ingrese su correo electrónico"
-        required
-      />
-
-      <label for="telefonocelular" id="tx-label"><p>Teléfono</p></label>
-      <input
-        type="number"
-        name="cel"
-        id="telefonocelular"
-        placeholder="Ingrese su número de contacto"
-        required
-        maxlength="10"
-      />
-
-      <label for="nivel" id="tx-label2"><p>Nivel de tenis</p></label>
-      <select name="nivel" id="npt-text">
-        <option value="hidden" id="opcion">Seleccione una opción</option>
-        <option value="A1" id="opcion">A1</option>
-        <option value="A2" id="opcion">A2</option>
-        <option value="B1" id="opcion">B1</option>
-        <option value="B2" id="opcion">B2</option>
-      </select>
-
-      <label for="desafios" id="tx-label3"><p>¿Acepta desafíos?</p></label>
-      <div id="radio">
-        <input type="radio" name="acepta" /><b>Si</b><br />
-        <input type="radio" name="acepta" /><b>No</b><br />
+      <div class="mb-3">
+        <label for="nombre_apellido_cliente" class="form-label">Nombre y Apellido</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+          <div *ngIf="password.errors?.['required']">
+            El password es requerido.
+          </div>
+        </div>
       </div>
-      
-      <input type="button" onclick="mensajeRegistroExitoso()" value="Enviar" id="Enviar">
+
+      <div class="mb-3">
+        <label for="nombre_apellido_cliente" class="form-label">Domicilio</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+          <div *ngIf="password.errors?.['required']">
+            El password es requerido.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="nombre_apellido_cliente" class="form-label">Fecha de Nacimiento</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+          <div *ngIf="password.errors?.['required']">
+            El password es requerido.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="nombre_apellido_cliente" class="form-label">Telefono</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+          <div *ngIf="password.errors?.['required']">
+            El password es requerido.
+          </div>
+        </div>
+      </div>
 
 
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input
+          formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <!-- lo que hace esta parte es saber si el campo email esta mal, lo que se va a mostrar es el 
+        mensaje Email requerido o formato valido -->
+        <!-- para que funcione, el valor EMAIL lo tengo que tomar desde el TS al definir que email como :
+             get email(){return this.loginForm.controls.email;}     -->
+    
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <div *ngIf="email.errors?.['required']">
+              El Email es requerido.</div>
+            <div *ngIf="email.errors?.['email']">
+              El Email debe tener un formato valido</div>
+            <div id="emailHelp" class="form-text">
+            No compartiremos tu correo con nadie.
+            </div>
+          </div>
+       </div>
+
+    
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Clave</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+          <div *ngIf="password.errors?.['required']">
+            El password es requerido.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Nivel de Tenis     </label>
+        <select name="nivel" id="npt-text">
+          <option value="hidden" id="opcion">Seleccione una opción</option>
+          <option value="A1" id="opcion">A1</option>
+          <option value="A2" id="opcion">A2</option>
+          <option value="B1" id="opcion">B1</option>
+          <option value="B2" id="opcion">B2</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">¿Acepta desafíos?</label>
+          <div id="radio">
+           <input type="radio" name="acepta" /><b>Si</b><br />
+           <input type="radio" name="acepta" /><b>No</b><br />
+          </div>
+      </div>
+
+      <button type="submit" (click)="registrarusuario()" class="btn btn-primary">
+        Registrarse
+      </button>
+    
     </form>
+    
   
   </div>

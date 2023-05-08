@@ -6,19 +6,21 @@
       formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
       aria-describedby="emailHelp"
     />
-      <div *ngIf="email.invalid && (email.dirty || email.touched)"
-      class="text-danger">
-      <div *ngIf="email.errors?.['required']">
-        El Email es requerido.
+    <!-- lo que hace esta parte es saber si el campo email esta mal, lo que se va a mostrar es el 
+    mensaje Email requerido o formato valido -->
+    <!-- para que funcione, el valor EMAIL lo tengo que tomar desde el TS al definir que email como :
+         get email(){return this.loginForm.controls.email;}     -->
+
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+        <div *ngIf="email.errors?.['required']">
+          El Email es requerido.</div>
+        <div *ngIf="email.errors?.['email']">
+          El Email debe tener un formato valido</div>
+        <div id="emailHelp" class="form-text">
+        No compartiremos tu correo con nadie.
+        </div>
       </div>
-      <div *ngIf="email.errors?.['email']">
-        El Email debe tener un formato valido
-      </div>
-      <div id="emailHelp" class="form-text">
-      No compartiremos tu correo con nadie.
-    </div>
-  </div>
-</div>
+   </div>
 
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Clave</label>
@@ -28,19 +30,18 @@
       class="form-control"
       id="exampleInputPassword1"
     />
-    <div *ngIf="password.invalid && (password.dirty || password.touched)"
-    class="text-danger">
-    <div *ngIf="password.errors?.['required']">
-      El password es requerido.
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+      <div *ngIf="password.errors?.['required']">
+        El password es requerido.
+      </div>
     </div>
-
-</div>
   </div>
   <button type="submit" (click)="login()" class="btn btn-primary">
-    Iniciar Sesion  (click) = login() 
+    Iniciar Sesion 
   </button>
-  <button type="submit" (click)="log2()" class="btn btn-primary">
-    Iniciar Sesion onclick="log2"
+  <button type="submit" (click)="registrate()" class="btn btn-primary">
+    Registrate
   </button>
+
 </form>
 

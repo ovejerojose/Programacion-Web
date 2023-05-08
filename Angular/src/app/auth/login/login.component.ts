@@ -109,6 +109,12 @@ login(){
   }   //cierra el else
 
 }   //cierra metodo login
+
+//metodo registrate
+registrate(){
+  this.router.navigateByUrl('formulario');
+}
+
 }
 
 

@@ -1,0 +1,23 @@
+form{
+    margin-left: 100px;
+    align-items: center;
+    
+}
+
+.push {
+    height: 190px; /* la altura del footer */
+  }
+
+ form input{
+        width: 400px;
+ } 
+
+
+ div formulario-de-registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+
+  

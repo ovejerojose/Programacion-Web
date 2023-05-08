@@ -89,60 +89,6 @@ border-style: none!important;
 background-color: #bf9742 !important;
 }
 
-/* footer*/
-
-footer{
-	background-color: #bf9742;
-	text-align: center;
-    margin-left: auto;
-    margin-right: auto;	
-    margin-bottom: 5px;
-    margin-top:20px;
-    font-family: 'Poppins', sans-serif;
-    padding-bottom: 5px;
-    
-}
-
-footer p{padding: 5px;}
-
-footer a{
-	padding-right: 50px;
-	padding-left: 5px 	;
-	text-decoration: none;
-	display: inline-block;
-	color : #61481c;
-}
-
-footer a:visited{
-	color : #61481c;
-}
-
-.formularios-login{
-	margin-left: 30px;
-}
-
-
-.formularios-login input{
-	width: 300px;
-	height: 25px;
-	margin-bottom: 10px;
-
-	
-}
-
-.formularios-login button{
-	width: 300px;
-	height: 30px;
-	margin-bottom: 10px;
-
-	
-}
-
-.formularios-login option{
-	width: 300px;
-	height: 30px;
-	margin-bottom: 10px;
-}
 
 #id{
 	margin-top: 10px;
