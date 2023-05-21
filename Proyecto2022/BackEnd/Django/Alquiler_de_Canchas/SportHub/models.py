@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Usuario(models.Model):
     email=models.CharField(max_length=30)
-    password=models.CharField()
+    password=models.CharField(max_length=30)
 
 class Persona(models.Model):
     Usuario=models.ForeignKey(Usuario,on_delete=models.CASCADE)    
