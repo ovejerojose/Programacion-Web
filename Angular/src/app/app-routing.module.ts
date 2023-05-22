@@ -4,17 +4,20 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { MapasitioComponent } from './pages/mapasitio/mapasitio.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { AlquilarCanchaComponent } from './pages/alquilar-cancha/alquilar-cancha.component';
 
 //creo constante tipo Routes ?¿
 
 // rutas es un arrelo []
 const app_routes: Routes = [
-  { path: '', component: PrincipalComponent},
-  { path: 'quienessomos', component: QuienessomosComponent},
-  { path: 'mapasitio', component: MapasitioComponent},
-  { path: 'formulario', component: FormularioComponent},
-  { path: '**', pathMatch: 'full', redirectTo: ''}
+  { path: '', component: PrincipalComponent },
+  { path: 'quienessomos', component: QuienessomosComponent },
+  { path: 'mapasitio', component: MapasitioComponent },
+  { path: 'formulario', component: FormularioComponent },
+  { path: 'alquilar-cancha', component: AlquilarCanchaComponent },
+  { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
+
 
 
 //decorador? vaya a saber que es esto

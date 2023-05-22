@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,8 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { MapasitioComponent } from './pages/mapasitio/mapasitio.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { AlquilarCanchaComponent } from './pages/alquilar-cancha/alquilar-cancha.component';
+import { ServicioDePrueba } from './servicioDePrueba.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,16 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
     PrincipalComponent,
     QuienessomosComponent,
     MapasitioComponent,
-    FormularioComponent
+    FormularioComponent,
+    AlquilarCanchaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule // Agrega HttpClientModule aquí
   ],
-  providers: [],
+  providers: [ServicioDePrueba],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
