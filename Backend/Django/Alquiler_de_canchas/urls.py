@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-
+from SportHub import views
+#Api router
 router=routers.DefaultRouter()
+router.register('viewproducts',views.ViewProductsView,basename='view_products')
+router.register('viewcourt',views.courtView,basename='view_court')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
