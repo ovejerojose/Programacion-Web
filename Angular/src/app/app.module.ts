@@ -13,6 +13,8 @@ import { MapasitioComponent } from './pages/mapasitio/mapasitio.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { AlquilarCanchaComponent } from './pages/alquilar-cancha/alquilar-cancha.component';
 import { ServicioDePrueba } from './servicioDePrueba.service';
+import { LoginComponent } from './auth/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,17 @@ import { ServicioDePrueba } from './servicioDePrueba.service';
     QuienessomosComponent,
     MapasitioComponent,
     FormularioComponent,
-    AlquilarCanchaComponent
+    AlquilarCanchaComponent,
+    LoginComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule // Agrega HttpClientModule aquí
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
   providers: [ServicioDePrueba],
   bootstrap: [AppComponent]

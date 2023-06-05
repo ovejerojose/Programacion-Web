@@ -5,17 +5,20 @@ import { QuienessomosComponent } from './pages/quienessomos/quienessomos.compone
 import { MapasitioComponent } from './pages/mapasitio/mapasitio.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { AlquilarCanchaComponent } from './pages/alquilar-cancha/alquilar-cancha.component';
+import { LoginComponent } from './auth/login/login.component';
 
 //creo constante tipo Routes ?¿
 
 // rutas es un arrelo []
 const app_routes: Routes = [
-  { path: '', component: PrincipalComponent },
+  { path: 'inicio', component: PrincipalComponent },
   { path: 'quienessomos', component: QuienessomosComponent },
   { path: 'mapasitio', component: MapasitioComponent },
   { path: 'formulario', component: FormularioComponent },
   { path: 'alquilar-cancha', component: AlquilarCanchaComponent },
+  { path: 'iniciar-sesion', component:LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }
+ 
 ];
 
 

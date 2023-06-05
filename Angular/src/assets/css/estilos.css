@@ -199,3 +199,11 @@ footer a:visited{
 #id{
 	margin-top: 10px;
 }
+
+/*  validaciones /*/
+.ng-valid:not(form).ng-touched {
+	border-left:5px solid #42A948;
+}
+.ng-invalid:not(form).ng-touched {
+	border-left:5px solid #a94442;
+}
