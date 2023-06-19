@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #Api routes
     path('api/',include('SportHub.urls')),
+    path('api/',include('metodo_de_pago.urls')),
     path('api/',include(router.urls))
 ]
 
